@@ -34,19 +34,37 @@ Active the folder sync and let public the user avatars
 
 Start the local development server
 
-    `php artisan serve`
+    php artisan serve
+    
 
 You can now access the server at http://localhost:8000
 
 
 If you want real time testing you have to do these steps :
 
--put your pusher credentials in .env
+Put your pusher credentials in .env
 
--install beyondcode/laravel-websockets
+Install beyondcode/laravel-websockets
 
-   `composer require beyondcode/laravel-websockets`
+    composer require beyondcode/laravel-websockets
+    
+Publish the configuration file
 
+    php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider"
+    
+Migrate the database
+
+    php artisan migrate
+    
+Start the WebSockets server
+
+    php artisan websockets:serve
+    
+Make sure about configuration of comfig/app , config/broadcast and config/websockets
+
+You can monitor Events using WebSockets's dashboard 
+
+You can now access the dashboard at http://localhost:8000/laravel-websockets
 
 
 Check the postman collection
