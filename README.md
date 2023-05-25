@@ -62,7 +62,7 @@ Start the WebSockets server
     
 Make sure about configuration of comfig/app , config/broadcast and config/websockets
 
-You can monitor Events using WebSockets's dashboard 
+You can monitor Events using WebSocket's dashboard 
 
 You can now access the dashboard at http://localhost:8000/laravel-websockets
 
